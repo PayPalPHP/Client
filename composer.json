@@ -1,0 +1,57 @@
+{
+    "name": "ajuchacko/php-paypal-api",
+    "description": "PayPal API v2 client for PHP",
+    "keywords": ["paypal", "api"],
+    "homepage": "https://github.com/PayPalPHP/Client",
+    "license": "MIT",
+    "support":
+    {
+        "issues": "https://github.com/PayPalPHP/Client/issues"
+    },
+    "authors": [
+    {
+        "name": "Aju Chacko",
+        "email": "ajuchacko91@gmail.com",
+        "homepage": "https://github.com/ajuchacko"
+    }],
+    "require":
+    {
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev":
+    {
+        "guzzlehttp/guzzle": "^7.5",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Paypal\\": "src/"
+        }
+    },
+    "autoload-dev":
+    {
+        "psr-4":
+        {
+            "Paypal\\Tests\\": "tests/"
+        }
+    },
+    "config":
+    {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins":
+        {
+            "php-http/discovery": true
+        }
+    },
+    "scripts":
+    {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra":
+    {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
