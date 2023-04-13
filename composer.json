@@ -16,7 +16,9 @@
     }],
     "require":
     {
-        "php": "^7.4 || ^8.0"
+        "php": "^7.4 || ^8.0",
+        "php-http/client-common": "^2.6",
+        "php-http/discovery": "^1.15"
     },
     "require-dev":
     {
