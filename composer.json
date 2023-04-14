@@ -23,7 +23,8 @@
     "require-dev":
     {
         "guzzlehttp/guzzle": "^7.5",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^10.0",
+        "symfony/var-dumper": "^6.2"
     },
     "autoload":
     {
