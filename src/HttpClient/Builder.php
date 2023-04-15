@@ -6,6 +6,10 @@ use Http\Discovery\Psr18ClientDiscovery;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\PluginClientFactory;
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Http\Message\UriFactoryInterface;
 use Http\Client\Common\HttpMethodsClientInterface;
 
 final class Builder
