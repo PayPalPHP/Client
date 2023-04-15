@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Paypal;
 
 use Paypal\HttpClient\Builder;
+use Psr\Http\Client\ClientInterface;
 use Http\Client\Common\HttpMethodsClientInterface;
 
 /**
@@ -33,6 +34,20 @@ class Client
     public function __construct(Builder $httpClientBuilder = null, string $baseUrl = null)
     {
         $this->httpClientBuilder = $builder = $httpClientBuilder ?? new Builder();
+    }
+
+    /**
+     * Create a Paypal\Client using an HTTP client.
+     *
+     * @param ClientInterface $httpClient
+     *
+     * @return Client
+     */
+    public static function createWithHttpClient(ClientInterface $httpClient): self
+    {
+        $builder = new Builder($httpClient);
+
+        return new self($builder);
     }
 
     /**
